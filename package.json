@@ -1,11 +1,11 @@
 {
   "author": {
-    "name": "Tatsuo Kaniwa",
-    "email": "tatsuo@kaniwa.biz"
+    "name": "Raz Lachyani extension to Tatsuo Kaniwa",
+    "email": "raz.lachyani@gmail.com"
   },
-  "name": "nutcracker",
+  "name": "twemproxy",
   "description": "Node.js client library for the nutcracker.",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "main": "lib/index.js",
   "scripts": {
     "test": "mocha"
@@ -14,7 +14,7 @@
     "node": ">= 0.6.0"
   },
   "dependencies": {
-    "redis": "0.8.3"
+    "redis": "0.8.4"
   },
   "devDependencies": {
     "coffee-script": ">= 1.3",
@@ -31,17 +31,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com:t-k/nutcracker_node.git"
+    "url": "https://github.com/razlachyani/node_twemproxy.git"
   },
   "license": "MIT",
   "readme": "nutcracker - a node.js [nutcracker(twemproxy)](https://github.com/twitter/twemproxy) client\n====\n[![NPM version](https://badge.fury.io/js/nutcracker.png)](http://badge.fury.io/js/nutcracker)\n[![Build Status](https://travis-ci.org/t-k/nutcracker_node.png)](https://travis-ci.org/t-k/nutcracker_node)\n[![Dependency Status](https://david-dm.org/t-k/nutcracker_node/status.png)](http://david-dm.org/t-k/nutcracker_node)\n\nnutcracker has a limitation on available commands (e.g., \"info\", \"keys\" and [more](https://github.com/twitter/twemproxy/blob/master/notes/redis.md)).\n\nSo you cannot use [node_redis](https://github.com/mranney/node_redis) as it is. This module wraps these unavailable commands, and if these commands were called, return warning message and errors.\n\nInstallation\n---\n\n```bash\nnpm install nutcracker\n```\n\nUsage\n---\n\n```coffeescript\nnutcracker = require \"nutcracker\"\nclient = nutcracker.createClient(22121, \"127.0.0.1\")\n\nclient.set(\"string key\", \"string val\", nutcracker.print)\nclient.keys(\"*\", nutcracker.print)\n# => Error: Error: nutcracker: cannot use keys command\n# => false\n\n```",
   "bugs": {
-    "url": "https://github.com/t-k/nutcracker_node/issues"
-  },
-  "_id": "nutcracker@0.0.2",
-  "dist": {
-    "shasum": "8208888b7d8aa1f0d6afe3c3b67117d9833826ff"
-  },
-  "_from": "nutcracker@0.0.2",
-  "_resolved": "https://registry.npmjs.org/nutcracker/-/nutcracker-0.0.2.tgz"
+    "url": "https://github.com/razlachyani/node_twemproxy.git/issues"
+  }
 }
